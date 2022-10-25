@@ -84,9 +84,9 @@ export function recibirCadena(cadena) {
     }
     
     if (estado === "E" || estado === "D" || estado === "F") {
-      return `la cadena ingresada  ** ${verificar} ** es aceptada`
+      return `la cadena ingresada  ** ${verificar} ** es valida, porque se llego al estado de aceptacion ** ${estado} **`
     } else {
-      return `la cadena ingresada ** ${verificar} ** es rechazada`
+      return `la cadena ingresada ** ${verificar} ** es invalida, poque no quedo en un estado de aceptacion ** ${estado} **`
     }
   }
 }
