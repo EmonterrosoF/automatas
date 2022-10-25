@@ -1,0 +1,108 @@
+#root {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.container {
+  animation: fluido 90s ease-in-out infinite;
+  width: 1500px;
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(-45deg, #8b2000a0, #850033c9, #06002cb1, #4a001090);
+  background-size: 300%;
+  
+  border-radius: 20px;
+  padding: 50px 0px;
+}
+
+.filtro {
+  border: 10px solid transparent;
+  transition: 0.5s ease-in-out;
+  width: 45em;
+  height: 30em;
+  padding: 10px;
+}
+
+.filtro:hover {
+  border: 10px solid;
+  border-color: #fff;
+  border-radius: 10px;
+  transform: perspective(800px) rotateY(12deg);
+}
+
+.resultado {
+  width: 500px;
+  height: 150px;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  margin-top: 60px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6em;
+}
+
+form input {
+  padding: 10px;
+  width: 300px;
+  height: 20px;
+  margin: 20px;
+  border-radius: 100px;
+  outline: none;
+  background-color: rgb(227, 217, 217);
+}
+
+form button {
+  padding: 15px 45px;
+  border-radius: 100px;
+  background: #5b4a9a;
+  color: rgb(222, 212, 212);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  color: #fff;
+  background: #735dc2;
+}
+
+.tittle {
+  animation: fluido 15s ease-in-out infinite;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes fluido {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+
+h2 {
+  color: #fff;
+}
