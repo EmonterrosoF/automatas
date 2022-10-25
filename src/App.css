@@ -1,35 +1,40 @@
-#root {
-  max-width: 2000px;
+body {
+  background: #242022;
+}
+
+.App {
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 60px 0;
 }
 
 .container {
-  animation: fluido 90s ease-in-out infinite;
-  width: 1500px;
+  animation: fluido 60s ease-in-out infinite;
+  margin: 0 auto;
+  padding: 60px 0;
+  max-width: 1200px;
   display: flex;
-  justify-content: space-around;
-  background: linear-gradient(-45deg, #8b2000a0, #850033c9, #06002cb1, #4a001090);
+  justify-content: space-evenly;
+  background: linear-gradient(
+    -45deg,
+    #8b2000a0,
+    #850033c9,
+    #06002cb1,
+    #4a001090
+  );
   background-size: 300%;
-  
   border-radius: 20px;
-  padding: 50px 0px;
+  margin-top: 30px;
+  padding: 50px 50px;
 }
 
 .filtro {
   border: 10px solid transparent;
   transition: 0.5s ease-in-out;
-  width: 45em;
-  height: 30em;
+  width: 50%;
+  height: 40%;
+  margin-bottom: 15px;
   padding: 10px;
 }
 
@@ -41,26 +46,33 @@
 }
 
 .resultado {
-  width: 500px;
   height: 150px;
+  width: 500px;
   overflow-y: auto;
   overflow-wrap: break-word;
   margin-top: 60px;
 }
 
+.contenedorInput {
+  margin-top: 10px;
+}
+
 form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: center;
+  width: 50%;
   gap: 6em;
 }
 
 form input {
-  padding: 10px;
+  padding: 18px;
+  font-size: 18px;
   width: 300px;
   height: 20px;
-  margin: 20px;
   border-radius: 100px;
+  margin-right: 10px;
   outline: none;
   background-color: rgb(227, 217, 217);
 }
@@ -70,6 +82,7 @@ form button {
   border-radius: 100px;
   background: #5b4a9a;
   color: rgb(222, 212, 212);
+  border: none;
   transition: all 0.3s ease;
 }
 
@@ -102,7 +115,132 @@ button:hover {
   }
 }
 
-
 h2 {
   color: #fff;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%;
+  }
+
+  .filtro {
+    width: 90%;
+    height: 40%;
+  }
+
+  form {
+    gap: 40px;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .validador {
+    width: 90%;
+
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedorInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+form {
+  align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.1;
+}
+
+@media screen and (max-width: 64em) {
+  body {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  body {
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 30em) {
+  body {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 895px) {
+  * {
+    font-size: 100%;
+  }
+
+  .resultado {
+     width: 450px;
+  }
+
+  .filtro {
+    width: 100%;
+  }
+
+  h1{
+    font-size: 10px
+  }
+  
+}
+
+@media only screen and (min-width: 320px) and (max-width: 765px) {
+ 
+  
+  .contenedorInput{ 
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  form input {
+    width: 200px;
+  }
+
+  form button {
+    padding: 15px 45px;
+    border-radius: 100px;
+    background: #5b4a9a;
+    color: rgb(222, 212, 212);
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    color: #fff;
+    background: #735dc2;
+  }
+
+  .resultado {
+    width: 200px;
+  }
+
+  .filtro {
+    width: 320px;
+    height: 80%;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 11px;
+  }
 }

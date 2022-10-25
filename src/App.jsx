@@ -33,27 +33,34 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="tittle" >Automatas</h1>
+      <h1 className="tittle">Automatas</h1>
       <div className="container">
         <img className="filtro" src="automata.svg" alt="automata" />
         <form onSubmit={handleSubmit}>
           <h2>Simbolos del alfabeto valido ** ab **</h2>
           <div className="validador">
             {valid ? (
-              <div style={{color: "#fff"}}>no debes dejar espacios te lo dije!</div>
+              <div style={{ color: "#fff" }}>
+                <p> no debes dejar espacios te lo dije!</p>
+              </div>
             ) : valid || !cadena ? (
-              <div style={{color: "#fff"}}>debes de ingresar un valor sin espacios</div>
+              <div style={{ color: "#fff" }}>
+                <p>debes de ingresar un valor sin espacios</p>
+              </div>
             ) : (
-              <div style={{color: "#fff"}}>
-                bien! pero recuerda que tiene que pertenecer al alfabeto
+              <div style={{ color: "#fff" }}>
+                <p>bien! pero recuerda que tiene que pertenecer al alfabeto</p>
               </div>
             )}
-            <input autoFocus type="text" onChange={validador} />
-            <button>Validar</button>
+            <div className="contenedorInput">
+              <input autoFocus type="text" onChange={validador} />
+              <button>Validar</button>
+            </div>
+
             <div className="resultado">
-            {" "}
-            <h3 style={{color: "#fff"}}>Resultado: {resultado}</h3>
-          </div>
+              {" "}
+              <h3 style={{ color: "#fff" }}>Resultado: {resultado}</h3>
+            </div>
           </div>
         </form>
       </div>
